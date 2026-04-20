@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div id="loader">Loading AI Engine...</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <h2 id="title">AI Dashboard</h2>
+
+    <div>
+        <button onclick="toggleDark()">🌙</button>
+        <button onclick="toggleLang()">🌐</button>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="grid">
+
+    <!-- INPUT PANEL -->
+    <div class="panel animate">
+
+        <h3>AI Input Engine</h3>
+
+        <select id="business">
+            <option value="clothes">Clothes</option>
+            <option value="food">Food</option>
+            <option value="services">Services</option>
+        </select>
+
+        <select id="age">
+            <option value="young">Young</option>
+            <option value="old">Old</option>
+        </select>
+
+        <input id="budget" type="number" placeholder="Budget">
+
+        <select id="goal">
+            <option value="sales">Sales</option>
+            <option value="awareness">Awareness</option>
+        </select>
+
+        <button onclick="analyze()">Run AI</button>
+
+    </div>
+
+    <!-- RESULTS -->
+    <div class="panel big animate">
+
+        <h3>AI Result</h3>
+        <div id="result"></div>
+
+        <div class="cards">
+
+            <div class="card fb">Facebook <p id="fb">0</p></div>
+            <div class="card ig">Instagram <p id="ig">0</p></div>
+            <div class="card tt">TikTok <p id="tt">0</p></div>
+
+        </div>
+
+        <canvas id="chart"></canvas>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
